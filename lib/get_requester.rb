@@ -12,10 +12,11 @@ class GetRequester
     uri = URI.parse(@url)
     response = Net::HTTP.get_response(uri)
     response.body
-      binding.pry
+  
   end
 
   def parse_json
+        binding.pry
     JSON.parse(self.get_response_body)
 
   end
